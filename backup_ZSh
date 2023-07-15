@@ -124,7 +124,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
+# function to change profile for the terminal 
+function chp(){
+      xdotool key --clearmodifiers Shift+F10 r $1
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -141,6 +144,8 @@ export PATH=$PATH:/home/xe-lpt-71/.local/bin/riscof
 export PATH="/home/xe-lpt-71/intelFPGA/20.1/modelsim_ase/bin:$PATH" # Model Sim 
 export token="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"
 
+
+alias terminal_themes='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 alias ohmyzsh="code ~/.zshrc"
 alias ss='gnome-screenshot -a' #ss for screenshot
 alias c='clear'
@@ -149,3 +154,4 @@ alias ripes="/home/xe-lpt-71/Ripes-v2.2.6-linux-x86_64.AppImage"
 alias space="sudo du -h --exclude='/run/user/1000/doc' --exclude='/run/user/1000/gvfs' / | sort -hr | head -n 20"
 eval $(thefuck --alias)
 
+ 
