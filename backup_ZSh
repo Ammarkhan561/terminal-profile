@@ -21,6 +21,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 ZSH_THEME="powerlevel10k/powerlevel10k"
 #use p10k configure command to set up powerlevel10k
 # p10k configure
+# use this command to enable ssh key 
+# ssh-keygen -o -t rsa -C "2019ee34@student.uet.edu.pk"
 
 
 
@@ -138,6 +140,7 @@ export PATH="/home/xe-lpt-71/bsc-2023.01-ubuntu-20.04/bin:$PATH" # bsc
 export PATH=$PATH:/home/xe-lpt-71/.local/bin/riscof
 export PATH="/home/xe-lpt-71/intelFPGA/20.1/modelsim_ase/bin:$PATH" # Model Sim 
 export token="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"
+
 alias ohmyzsh="code ~/.zshrc"
 alias ss='gnome-screenshot -a' #ss for screenshot
 alias c='clear'
