@@ -98,7 +98,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-Ammar Khan Ammarkhan561
+# Ammar Khan Ammarkhan561
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
