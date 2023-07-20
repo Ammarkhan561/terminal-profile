@@ -1,3 +1,4 @@
+figlet -f slant "Ammar Khan" |  lolcat
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -15,16 +16,17 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="pixegami-agnoster"
+ZSH_THEME="pixegami-agnoster"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="random"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 #use p10k configure command to set up powerlevel10k
 # p10k configure
 # use this command to enable ssh key 
 # ssh-keygen -o -t rsa -C "2019ee34@student.uet.edu.pk"
 
 
+PS1='Ammar@Ammar-Khan \w \$ '
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -47,7 +49,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO\[\033[1;32m\]\_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -96,6 +98,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+Ammar Khan Ammarkhan561
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -133,7 +137,6 @@ function chp(){
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-# PS1='\u@Ammar-Khan \w \$ '
 
 export PATH="/usr/bin:$PATH"
 export PATH="/home/xe-lpt-71/RISCV64/riscv64-unknown-elf-toolchain/riscv/bin:$PATH" # Toolchain 64 bit 
@@ -143,8 +146,13 @@ export PATH="/home/xe-lpt-71/bsc-2023.01-ubuntu-20.04/bin:$PATH" # bsc
 export PATH=$PATH:/home/xe-lpt-71/.local/bin/riscof
 export PATH="/home/xe-lpt-71/intelFPGA/20.1/modelsim_ase/bin:$PATH" # Model Sim 
 export token="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"
-
-
+export spike32="riscv32-unknown-elf-gcc -march=rv32i -mabi=ilp32 -nostdlib -T link.ld test.s -o test.elf"
+export spike32_debug="spike -d --isa=RV32IM test.elf"
+export dump32="riscv32-unknown-elf-objdump -d test.elf > objdump.txt"
+export dump64="riscv64-unknown-elf-objdump -d test.elf > objdump.txt"
+export spike64="riscv64-unknown-elf-gcc -march=rv64gc -mabi=lp64 -nostdlib -T link.ld test.s -o test.elf"
+export spikelog="spike --isa=RV32IMAFDC -l --log-commits test.elf 1>spike.out 2>spike.log"
+export saillog="riscv_sim_RV32 test.elf > sail.log"
 alias terminal_themes='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 alias ohmyzsh="code ~/.zshrc"
 alias ss='gnome-screenshot -a' #ss for screenshot
@@ -153,5 +161,5 @@ alias vcs="sudo docker start bbdc0ef7cb2c; sudo docker attach bbdc0ef7cb2c"
 alias ripes="/home/xe-lpt-71/Ripes-v2.2.6-linux-x86_64.AppImage"
 alias space="sudo du -h --exclude='/run/user/1000/doc' --exclude='/run/user/1000/gvfs' / | sort -hr | head -n 20"
 eval $(thefuck --alias)
-
- 
+# chp 15
+# echo -e "\e[1;32mDon't Worry Allah is with you!!\e[0m" 
